@@ -1,63 +1,67 @@
-<html manifest="Cache.manifest">
-
+<html manifest="intro.manifest">
+<head>
 <style>
-body{background-color: black;
-color:white;font-size:10px;text-align:center;margin:0;overflow:hidden;}
-.info{overflow: hidden;position: fixed;position: absolute;top: 45%;left: 50%;font-size: 10px;font-family: sans-serif;color: #b8b8b8;transform: translate(-50%, -50%);}
-		
-.bg {
-/* The image used */
-background-image: url("1.jpg");
+    html, body{
+margin:auto;
+font-family:juma;
+font-size:20px;
+font-weight:lighter;
+text-align:left;
+color:#44e1c9;
+background-size:cover;
+background:repeat;
 }
-</style>
-	<p></p><br>
-	<head>
-		<title>HOST 9.00 by BekEs</title>
+		@font-face{
+			font-family: juma;
+			src: url('juma.ttf');
 		
+}
+
+
+#progress {
+ font-weight:bold;
+ text-shadow: 4px 4px 4px black;
+
+ font-size:18px;
+}
+.pointer {cursor: pointer;
+}
+
+.button {
+		  background-color: transparent;  
+		  border-radius: 5px;
+		  color: white;
+		  padding: .5em;
+		  text-decoration: none;
+		  height:100%;
+		  display:inline-table;
+		  
+		}
+
+.button:focus,
+		.button:hover {
+		  background-color: transparent;
+		  color: White;
+		}
+</style>
+
+<meta charset="utf-8">
+<title>Intro BekEs PS4 9.00</title>
 		<script>
-			function loadcomplete() {
-				document.getElementById("progress").innerHTML=sessionStorage.Queue+" Loaded Successfully !!";
-				sessionStorage.Queue="";
-			}
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Iniciando Instalacion en Cache...";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%<font color=#72f7ff>  ... تحميل الصفحة ";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="<font color=#68ffcb>Menu Principal<font color=#f1f1d6> Instalado!";setTimeout(function(){document.getElementById("progress").innerHTML="  Ya Puedes Elegir que Instalarar\n<font color=#bedbff>^_*  <font color=#76ffd6>Actualiza esta pagina y Disfruta de Tu <font color=#82B4FF>PlayStation <font color=#BEE06E>4<font color=#C2FFFF>! <font color=#bedbff> ^_^"; }, 1500);};
+			window.applicationCache.onnoupdate=function(){window.location.replace("intro.html");};
+        	window.applicationCache.onerror=function(){window.location.replace("intro.html");};
 		</script>
-		<script src="int64.js"></script>
-		<script src="rop.js"></script>
-		<script src="kexploit.js"></script>
-		<script src="webkit.js"></script>
-		<script src="payloads.js"></script>
-	</head>
-	<body class="bg">
-		<script>
-			window.onload = function(e){if(sessionStorage.Queue==null){sessionStorage.Queue="";}else if(sessionStorage.Queue!=""){executependingqueue(sessionStorage.Queue);}};
-			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
-			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
-		</script>
-		<h1 id="progress" class="titlehead">BekEs PS4 EXPLOIT HOST 9.00</h1><br>
-		<input type="hidden" id="psip" value="localhost"/>
-        <p></p><br><p></p><br><p></p><br><p></p><br></p><br>
+</head>
+<body style='background-image:url(11.jpg);background-size: cover';>
+<div style="text-align:center"><br>
+<h1 style='font-size:28px;text-align:center;color:black;'>.●★☆★●..:BekEs Jailbreak PS4 9.00:..●★☆★●.</h1>
 
-
-<a href="#" class="button" onclick="goldhen(); return false"><img src="goldhen.png""alt="" width="150" height="150"/></a>   
-			
-<a href="#" class="button" onclick="disableupdates();return false"><img src="dis_updates.png""alt="" width="150" height="150"/><a/> 
-			
-			<a href="#" class="button" onclick="app2usb(); return false"><img src="app2usb.png""alt="" width="150" height="150"/></a>
-			
-			<a href="#" class="button" onclick="appdumper(); return false"><img src="dumper.png""alt="" width="150" height="150"/></a>
-			
-	        <a href="#" class="button" onclick="webrte(); return false"><img src="webrte.png""alt="" width="150" height="150"/></a>
-			
-			<a href="#" class="button" onclick="todex(); return false"><img src="todex.png""alt="" width="150" height="150"/></a>
-			
-			<a href="#" class="button" onclick="ps4debug(); return false"><img src="ps4debug.png""alt="" width="150" height="150"/></a>
-	        
-			
-<p></p><br><p></p><br>
-<p></p><br><p></p><br>
-<p></p><br><p></p><br>
-<p></p><br>
-<h1 style='color:white;font-size:15px;text-align:center;top;'>Hack PS4 By BekEs All Social Media : B6_7E </h1>
-
+<br><br><br><br><br><br><br><br>
+<h1 id=progress style='font-size:24px;text-align:center;text-shadow: 4px 4px 4px black;color:#bae7ff;'> </h1>
+</div>
 </body>
+
 </html>
